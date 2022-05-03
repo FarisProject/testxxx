@@ -6,4 +6,5 @@ fi
 echo "Tachidesk data location inside the container -> /home/root/.local/share/Tachidesk"
 echo ""
 echo "The server is running by default configuration on  http://localhost:4567"
+echo $HOME
 exec runsvdir -P /etc/service;
