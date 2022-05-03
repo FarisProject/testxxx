@@ -5,7 +5,7 @@ ARG MODE=build
 
 COPY ./content /.tachiworkdir/
 
-RUN apk --update add curl caddy rclone openjdk8-jre-base tzdata \
+RUN apk add --no-cache curl caddy rclone openjdk8-jre-base tzdata \
     && chmod +x /.tachiworkdir/service/*/run /.tachiworkdir/service/*/log/run /.tachiworkdir/*.sh \
     && ln -s /.tachiworkdir/service/* /etc/service/
 
