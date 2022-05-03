@@ -1,0 +1,12 @@
+# Created by wy580477 for customized container <https://github.com/wy580477>
+{
+        log {
+                exclude http.handlers.reverse_proxy
+        }
+}
+:{$PORT}
+encode gzip
+# Configure tachidesk
+handle * {
+        reverse_proxy * localhost:4567
+}
