@@ -7,11 +7,5 @@
 encode gzip
 # Configure tachidesk
 handle * {
-        reverse_proxy * localhost:4567
-}
-# Configure ttyd
-handle /ttyd* {
-        redir /ttyd /ttyd/
-        uri strip_prefix /ttyd       
         reverse_proxy * localhost:7681
 }
