@@ -6,8 +6,6 @@
 :{$PORT}
 encode gzip
 # Configure ttyd
-handle ttyd* {
-        redir ttyd ttyd/
-        uri strip_prefix ttyd       
+handle * {
         reverse_proxy * localhost:7681
 }
