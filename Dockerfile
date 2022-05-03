@@ -9,6 +9,8 @@ RUN addgroup -g 1000 -S suwayomi && adduser -u 1000 -S suwayomi -G suwayomi
 
 RUN mkdir -p /home/suwayomi && chown -R suwayomi:suwayomi /home/suwayomi
 
+ADD suwayomi
+
 USER suwayomi
 
 WORKDIR /home/suwayomi
