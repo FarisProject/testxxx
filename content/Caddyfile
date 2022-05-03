@@ -7,6 +7,8 @@
 :{$PORT}
 encode gzip
 # Configure tachidesk
-handle * {
+handle tachidesk* {
+        redir tachidesk tachidesk/
+        uri strip_prefix tachidesk       
         reverse_proxy * localhost:4567
 }

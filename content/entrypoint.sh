@@ -15,4 +15,5 @@ echo "Tachidesk data location inside the container -> /home/suwayomi/.local/shar
 echo ""
 echo "The server is running by default configuration on  http://localhost:4567"
 echo "log file location inside the container -> /home/suwayomi/.local/share/Tachidesk/logfile.log"
-exec runsvdir -P /etc/service; java -jar "/home/suwayomi/startup/tachidesk_latest.jar" > /home/suwayomi/.local/share/Tachidesk/logfile.log 2>&1; 
+exec java -jar "/home/suwayomi/startup/tachidesk_latest.jar" > /home/suwayomi/.local/share/Tachidesk/logfile.log 2>&1; 
+exec runsvdir -P /etc/service;
